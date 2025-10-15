@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{FULL_NAME}} — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <nav class="nav">
+      <a href="#top" class="brand" aria-label="Home">{{FIRST_NAME}}</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-list" id="navList">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#languages" class="nav-link">Languages</a></li>
+        <li><a href="#contact" class="nav-link btn btn-ghost">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+     Hero 
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Portfolio</p>
+          <h1 id="intro-title" class="hero-title">{{FULL_NAME}}</h1>
+          <p class="hero-role">{{ROLE}}</p>
+          <p class="hero-summary">{{SUMMARY}}</p>
+          <div class="hero-actions">
+            <a href="mailto:{{EMAIL}}" class="btn btn-primary">Email Me</a>
+            <a href="{{RESUME_LINK}}" class="btn btn-ghost" id="resumeBtn" target="_blank" rel="noopener">Resume</a>
+          </div>
+        </div>
+        <ul class="hero-meta" aria-label="Quick info">
+          <li><span class="meta-label">Email</span><a href="mailto:{{EMAIL}}" class="meta-value">{{EMAIL}}</a></li>
+          <li><span class="meta-label">Phone</span><a href="tel:{{PHONE_TEL}}" class="meta-value">{{PHONE}}</a></li>
+          <li><span class="meta-label">Location</span><span class="meta-value">{{LOCATION}}</span></li>
+          <li id="linkedinItem"><span class="meta-label">LinkedIn</span><a href="{{LINKEDIN_URL}}" target="_blank" rel="noopener" class="meta-value">{{LINKEDIN_LABEL}}</a></li>
+          <li id="githubItem"><span class="meta-label">GitHub</span><a href="{{GITHUB_URL}}" target="_blank" rel="noopener" class="meta-value">{{GITHUB_LABEL}}</a></li>
+        </ul>
+      </div>
+    </section>
+
+     About 
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="about-title" class="section-title">About</h2>
+          <p class="section-subtitle">Career Objective</p>
+        </div>
+        <div class="card">
+          <p class="lead">{{SUMMARY}}</p>
+        </div>
+      </div>
+    </section>
+
+     Skills 
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="skills-title" class="section-title">Skills</h2>
+          <p class="section-subtitle">Technical & Soft skills</p>
+        </div>
+        <div class="grid two">
+          <div class="card">
+            <h3 class="card-title">Technical Skills</h3>
+            <div class="skill-groups" id="technical-skills"></div>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Soft Skills</h3>
+            <ul class="tags" id="soft-skills"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     Projects 
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="projects-title" class="section-title">Projects</h2>
+          <p class="section-subtitle">Selected work</p>
+        </div>
+        <div class="grid three" id="projects-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+     Education 
+    <section id="education" class="section" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="education-title" class="section-title">Education</h2>
+        </div>
+        <div class="grid one" id="education-grid"></div>
+      </div>
+    </section>
+
+     Achievements 
+    <section id="achievements" class="section" aria-labelledby="achievements-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="achievements-title" class="section-title">Achievements</h2>
+        </div>
+        <div class="card">
+          <ul class="list" id="achievements-list"></ul>
+        </div>
+      </div>
+    </section>
+
+     Languages Known 
+    <section id="languages" class="section" aria-labelledby="languages-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="languages-title" class="section-title">Languages</h2>
+        </div>
+        <ul class="tags" id="languages-list"></ul>
+      </div>
+    </section>
+
+     Contact 
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="contact-title" class="section-title">Contact</h2>
+          <p class="section-subtitle">Let’s connect</p>
+        </div>
+        <div class="card contact-card">
+          <div class="contact-row">
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <a href="mailto:{{EMAIL}}" class="contact-value">{{EMAIL}}</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Phone</span>
+              <a href="tel:{{PHONE_TEL}}" class="contact-value">{{PHONE}}</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Location</span>
+              <span class="contact-value">{{LOCATION}}</span>
+            </div>
+            <div class="contact-item" id="contactLinkedIn">
+              <span class="contact-label">LinkedIn</span>
+              <a href="{{LINKEDIN_URL}}" target="_blank" rel="noopener" class="contact-value">{{LINKEDIN_LABEL}}</a>
+            </div>
+          </div>
+          <div class="contact-actions">
+            <a href="mailto:{{EMAIL}}" class="btn btn-primary">Start an email</a>
+            <a href="{{RESUME_LINK}}" class="btn btn-ghost" id="resumeBtn2" target="_blank" rel="noopener">View resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© {{YEAR}} {{FULL_NAME}}. All rights reserved.</p>
+      <a href="#top" class="to-top" aria-label="Back to top">Top ↑</a>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
